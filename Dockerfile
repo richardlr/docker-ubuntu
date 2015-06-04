@@ -1,5 +1,7 @@
 FROM ubuntu:trusty-20150528
-MAINTAINER sameer@damagehead.com
+MAINTAINER aaron.lea@gmail.com
+
+COPY assets/sources.list /etc/apt/sources.list
 
 RUN echo 'APT::Install-Recommends 0;' >> /etc/apt/apt.conf.d/01norecommends \
  && echo 'APT::Install-Suggests 0;' >> /etc/apt/apt.conf.d/01norecommends \
